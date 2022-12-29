@@ -5,4 +5,3 @@
 - Discord: 
 SmokeyNoom5885#8377
 - Feel free to text me any time
-- https://discord.gg/ene33WYU
