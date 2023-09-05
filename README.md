@@ -3,5 +3,5 @@
 - 💞️ I’m looking to collaborate on making any website
 - 📫 How to reach me:-
 - Discord: 
-SmokeyNoom5885#8377
+smokeynoom5885
 - Feel free to text me any time
