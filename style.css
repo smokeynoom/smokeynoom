@@ -1,0 +1,247 @@
+:root {  
+	--color-1: rgb(42, 252, 152);
+	--color-2: rgb(41, 121, 255);
+	--bg-1: #e66465;
+	--bg-2: #9198e5;
+}
+
+html {
+	height: 100%;
+	cursor: none;
+	display: table;
+    margin: auto;
+	font-family: "Rubik", sans-serif;
+}
+
+#circularcursor {
+  	background-color: rgba(1, 1, 254, 0.48);
+  	border:1px solid black;    
+  	height: 40px;
+  	width: 40px;
+ 	-moz-border-radius:50%;
+  	-webkit-border-radius:50%;
+  	position: absolute;
+  	z-index: 10;
+	border-radius: 50%;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	background: linear-gradient(to bottom right, var(--bg-1), var(--bg-2));
+	background-repeat: no-repeat;
+	background-attachment: fixed;    
+	display: table-cell;
+    vertical-align: middle;
+}
+
+@keyframes float {
+	from, to {
+	transform: translateY(-0%);
+	}
+  
+	50% {    
+	transform: translateY(-3%);
+	}
+}
+
+@keyframes background-pan {
+	from {
+		background-position: 1000% center;
+	}
+  
+	to {
+		background-position: 0% center;
+	}
+}
+
+body {
+	height: 100vh;
+	background-color: black;
+	margin: 0rem;
+	display: grid;
+	place-items: center;
+}
+
+a {
+	color: white;
+}
+
+#links:hover {
+	text-decoration: none;
+	cursor: none;
+}
+
+.line {
+	display: flex;
+	justify-content: space-between;
+}
+
+.word {
+	color: white;
+	font-size: clamp(2rem, 8vw, 10rem);
+	font-family: "Rubik", sans-serif;
+	margin: 0rem;
+	text-transform: uppercase;
+	transition: opacity 250ms ease;
+}
+
+a {
+	text-decoration: none;
+}
+
+#text:has(.fancy:hover) .word:not(.fancy:hover) {
+	opacity: 0.2;
+}
+
+.fancy span {
+	display: inline-block;
+}
+
+.fancy > .outer {
+	transition: transform 350ms ease;
+}
+
+.fancy:hover > .outer {
+	transition-duration: 800ms;
+}
+
+.fancy:hover > .outer > .inner {
+	animation: float 5s ease infinite;
+}
+
+.fancy:hover > .outer > .inner > .letter {
+	background: linear-gradient(
+	to right,
+		var(--color-1),
+		var(--color-2),
+		var(--color-1)
+	);
+	background-size: 900%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: background-pan 150s linear infinite;
+}
+
+.fancy:hover > .outer:nth-child(1) {
+	transform: translate(-60%, 50%) rotate(8deg);
+}
+
+.fancy:hover > .outer:nth-child(2) {
+	transform: translate(-40%, 20%) rotate(4deg);
+}
+
+.fancy:hover > .outer:nth-child(3) {
+	transform: translate(-10%, 60%) rotate(-6deg);
+}
+
+.fancy:hover > .outer:nth-child(4) {
+	transform: translate(0%, 8%) rotate(-8deg);
+}
+
+.fancy:hover > .outer:nth-child(5) {
+	transform: translate(0%, -20%) rotate(5deg);
+}
+
+.fancy:hover > .outer:nth-child(6) {
+	transform: translate(0%, 20%) rotate(-3deg);
+}
+
+.fancy:hover > .outer:nth-child(7) {
+	transform: translate(0%, -40%) rotate(-5deg);
+}
+
+.fancy:hover > .outer:nth-child(8) {
+	transform: translate(0%, 15%) rotate(10deg);
+}
+
+.fancy:hover > .outer:nth-child(9) {
+	transform: translate(0%, -50%) rotate(8deg);
+}
+
+.fancy:hover > .outer:nth-child(10) {
+	transform: translate(0%, 15%) rotate(-6deg);
+}
+
+.fancy:hover > .outer:nth-child(11) {
+	transform: translate(50%, -10%) rotate(-3deg);
+}
+
+.fancy:hover > .outer:nth-child(12) {
+	transform: translate(120%, -30%) rotate(-10deg);
+}
+
+.hide {
+  display: none;
+}
+
+.word:hover + .hide {
+  display: block;
+  color: red;
+}
+
+::selection {
+	color: #00ffcc;
+}
+
+@media only screen and (max-width: 760px) {
+  	#circularcursor {
+		display: none;
+  	}
+
+	cursor {
+		display: pointer;
+	}
+}
+
+h1 {
+	text-decoration: underline;
+}
+
+.loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #2e2b47;
+      transition: opacity 0.5s, visibility 0.5s;
+      z-index: 100;
+}
+
+.loader-hidden {
+      opacity: 0;
+      visibility: hidden;
+}
+
+.loader::after {
+      content: "";
+      width: 75px;
+      height: 75px;
+      border: 15px solid #000000;
+      border-top-color: #35ffb5;
+      border-radius: 50%;
+      animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+      from {
+            transform: rotate(0turn);
+      }
+
+      to {
+            transform: rotate(1turn);
+      }
+}
+
+a:hover {
+	background: -webkit-linear-gradient(bottom left,#66b5ff, #83ff7a);
+	background-clip: text;
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+	cursor: none;
+}
