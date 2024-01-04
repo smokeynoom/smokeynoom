@@ -5,3 +5,4 @@
 - Discord: 
 smokeynoom5885
 - Feel free to text me any time
+[!SmokeyNoom's GitHub stats](https://github.com/anuraghazra/github-readme-stats)
