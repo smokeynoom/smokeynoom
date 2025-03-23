@@ -1,0 +1,1 @@
+// Add a function to copy discord username over here

@@ -1,8 +1,8 @@
 :root {  
 	--green: rgb(42, 252, 152);
 	--blue: rgb(41, 121, 255);
-	--bg-1: #e66465;
-	--bg-2: #9198e5;
+	--bg-1: #250b0b;
+	--bg-2: #520707;
 }
 
 html {
@@ -17,18 +17,26 @@ body {
 
 #title {
 	text-align: center;
-	color: white;
+	color: var(--green);
+      font-size: 50px;
+}
+
+.blog-link {
+      font-size: 20px;
+}
+
+.blog-link:hover {
+      color: rgb(152, 255, 228);
 }
 
 #about {
-	color: white !important;
+	color: rgba(225, 37, 37, 0.694);
 }
 
 #about:hover {
-	background: -webkit-linear-gradient(bottom left,#a6f273, #8a9dff);
+	background: rgb(225, 37, 37);
 	background-clip: text;
   	-webkit-background-clip: text;
-  	-webkit-text-fill-color: transparent;
 }
 
 ::selection {
@@ -52,7 +60,7 @@ a::after {
 }
 
 a::before {
-  background-color: #54b3d6;
+  background-color: rgb(32, 65, 55);
   height: 2px;
   bottom: 0;
   transform-origin: 100% 50%;
@@ -68,7 +76,7 @@ a::after {
   transform-origin: 100% 50%;
   transform: translate3d(200%, 0, 0);
   transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
-  color: white;
+  color: var(--green);
   cursor: crosshair;
 }
 
@@ -100,13 +108,12 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 27px;
   line-height: 1.5;
-  height: 100vh;
   place-items: center;
 }
 
 a {
   text-decoration: none;
-  color: #330000;
+  color: var(--blue);
   font-weight: 700;
   vertical-align: top;
   cursor: crosshair;
@@ -121,7 +128,7 @@ a {
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #2e2b47;
+      background-color: #2f0000;
       transition: opacity 0.5s, visibility 0.5s;
       z-index: 100;
 }
@@ -135,8 +142,8 @@ a {
       content: "";
       width: 75px;
       height: 75px;
-      border: 15px solid #000000;
-      border-top-color: #35ffb5;
+      border: 15px solid var(--bg-2);
+      border-top-color: var(--bg-1);
       border-radius: 50%;
       animation: loading 0.75s ease infinite;
 }
@@ -149,4 +156,8 @@ a {
       to {
             transform: rotate(1turn);
       }
+}
+
+::selection {
+	color: #00ffcc;
 }
